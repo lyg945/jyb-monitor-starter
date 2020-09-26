@@ -31,7 +31,8 @@
 
 使用本项目也非常简单
 - 第一步：只需要引入依赖包，引入此依赖包后，项目启动以后，就会通过zk客户端工具自动把本项目注册到zk的临时节点上
-
+> zk的服务器地址维护暂时比较喽,写死在代码中，后期可以根据不同环境变量设置到application.properties中，也可以从注册中心读取，暂时只想简单实现，解决现在的问题，后期慢慢优化
+> 文件地址：com.jyb.monitor.client.ClientConfig.getZk()
 ```
  <dependency>
     <groupId>com.jyb</groupId>
@@ -42,6 +43,7 @@
 ![创建Project](image/6.png)
 
 - 第二步：启动服务端监控项目去监听zk注册的服务变化，如果变化，会通过企业微信群机器人通知相关人员
+> 服务端zk更改-文件地址：com.jyb.monitor.server.config.ZkConfig.getZk
 ```
  运行 jyb-monitor-server 项目下的 serverStart
 ```
