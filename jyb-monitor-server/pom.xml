@@ -61,6 +61,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.jyb</groupId>
+            <artifactId>jyb-monitor-client</artifactId>
+            <version>1.0.12-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
